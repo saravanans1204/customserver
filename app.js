@@ -3,8 +3,9 @@
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3030;
-
-
+const {createInstance,connection}=require('./db/connect.js');
+const {createEntry}=require('./db/connect.js');
+const { loginDb } = require('./db/dataDb.js');
 app.get('/', async (req, res) => {
     res.send('<h1>happening</h1>')
 });
