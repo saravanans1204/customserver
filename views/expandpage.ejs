@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') -%>
+    <body>
+        <%- include('partials/navbar.ejs') %>
+        <div class="main-body">
+
+         <div class="content
+         ">  
+            <h1 style="font-size:3vh;"><%= title %></h1>
+            <p style="line-height:2vh;"><%= content %></p>
+        </div> 
+     
+
+
+        </div>
+      
+         
+        
+        <%- include('partials/footer') -%>
+
+
+
+        <!-- Scripts -->
+        <script>
+            document.querySelector('#ham')
+            .addEventListener('click',(e)=>{
+                document.querySelector('.nav-menu').classList.toggle('hover-menu')
+              }); 
+          </script>
+        <script src="" async defer></script>
+    </body>
+</html>
