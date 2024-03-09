@@ -35,7 +35,7 @@ connectionTwo=mongoose.createConnection(entryUri)
 
 
 // routers
-app.get('/', async (req, res) => {
+app.get('/api', async (req, res) => {
     // Data to be inserted
     const data1 = {
         _id: '65eb11a2be8309f353afdb81',
@@ -45,7 +45,7 @@ app.get('/', async (req, res) => {
     res.send('<h1>happening</h1>')
 });
 
-app.get('/getData', async (req, res) => {
+app.get('/api/getData', async (req, res) => {
  
     loginDb.find({ "message": { $exists: true } }).then((resolve,reject)=>{
         // console.log(resolve)
